@@ -11,9 +11,9 @@ public class Basics {
 		Integer[][] dataSets = {{1, 2, 4, 4},{3, 1, 6, 9},{4, 2, 6, 1, 3, 7, 5}, {2, -1, 4, 3, 6, 3, -5}};
 		int[] dataSums = {8, 9, 4, 14};
 		
-		FindPairSum(dataSets[0], dataSums[0]);
+		FindPairSum(dataSets[0], dataSums[0]); // Running it against the first set to debug Arrays.asList 
 		
-		//for (int i=0; i < dataSets.length;i++) {
+		//for (int i=0; i < dataSets.length;++i) {
 		//	FindPairSum(dataSets[i], dataSums[i]);
 		//	System.out.println("\n\n");
 		//}
@@ -22,9 +22,9 @@ public class Basics {
 	}
 	
 	public static boolean FindPairSum(Integer[] dataSet, int dataSum) {
-		for (int i=0; i < dataSet.length; i++) {
+		for (int i=0; i < dataSet.length; ++i) {
 			System.out.printf("\nCurrent element is %s, and has an index of %s.\n", dataSet[i], Arrays.asList(dataSet).indexOf(i));
-			for (int j=0; j < dataSet.length; j++) {
+			for (int j=0; j < dataSet.length; ++j) {
 				if (Arrays.asList(dataSet).indexOf(i) == Arrays.asList(dataSet).indexOf(j)) {
 					System.out.printf("Index's are the same (%s and %s), these numbers will be ignored.\n", Arrays.asList(dataSet).indexOf(i), Arrays.asList(dataSet).indexOf(j));
 				} else {
